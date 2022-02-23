@@ -1,0 +1,64 @@
+.loaderscreen {
+  border: 16px solid red;
+  border-top: 16px solid gray;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  padding: 20px 40px;
+  font-family: sans-serif;
+  background: #ebebeb;
+}
+
+.form-container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+form {
+  padding: 2em;
+  background: white;
+  border-radius: 1rem;
+}
+
+input {
+  width: 100%;
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background: #f59f05;
+  border: none;
+  width: 200px;
+  padding: 1rem;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}

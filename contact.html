@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" href="data:;base64,=" />
+  </head>
+  <body>
+    <main class="form-container">
+      <form id="contactForm">
+        <div>
+          <label>
+            Name (required)
+            <input name="firstName" id="firstName" />
+          </label>
+          <div class="error" id="NameError">Please enter your first name</div>
+        </div>
+
+        <div>
+          <label>
+            Subject (minimum 10 characters)
+            <input name="subject" id="subject" />
+          </label>
+          <div class="error" id="subjectError">
+            Your Subject must be at least 10 characters
+          </div>
+        </div>
+
+        <div>
+          <label>
+            Email
+            <input name="email" id="email" />
+          </label>
+          <div class="error" id="emailError">
+            Please enter a valid email address
+          </div>
+        </div>
+
+        <div>
+          <label>
+            Adress (minimum 25 characters)
+            <input name="adress" id="adress" />
+          </label>
+          <div class="error" id="adressError">
+            Your address must be at least 25 characters
+          </div>
+        </div>
+        <button>Submit</button>
+      </form>
+    </main>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
