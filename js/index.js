@@ -2,7 +2,11 @@
 
 const resultsBag = document.querySelector(".results");
 
+resultsBag.innerHTML = "";
+
 async function forTheApi() {
+  try {
+
   const response = await fetch(
     "https://genius.p.rapidapi.com/artists/16775/songs",
     {
@@ -20,15 +24,25 @@ async function forTheApi() {
 
   const results = json.response.songs;
 
+
+
   results.forEach(function (results) {
     console.log(results.annotation_count);
     console.log(results.full_title);
     console.log(results.path);
-    resultsBag.innerHTML += `<div>${results.annotation_count}</div>
-                                   <div>${results.full_title}</div>
-                                   <div>${results.path}</div>`;
+    resultsBag.innerHTML += `<a href="details.html?path=${results.path}" class="bottom">
+                                  <h1>${results.annotation_count}</h1>
+                                   <h2>${results.full_title}</h2>
+                                   <h3>${results.path}</h3>`                     
   });
+
+ }catch (error) {
+  console.log(error);
+  resultsContainer.innerHTML = message("error", error);
+}
 };
+
+
 
 forTheApi();
 

@@ -8,7 +8,7 @@ const keyHeadersInfo = {
   },
 };
 
-const mainInfo = document.querySelector(".main-content");
+const mainContent = document.querySelector(".mainContent");
 
 async function fetchTheTitle() {
 
@@ -25,10 +25,13 @@ async function fetchTheTitle() {
     console.log(error);
   } 
 };
- 
+
+mainContent.innerHTML = "";
 
 function createHtml(results) {
-    container.innerHTML = `<h1>${results.full_title}</h1>`;
+  mainContent.innerHTML = `<h1>${results.response.songs[5].full_title}</h1>
+                        <div>${results.response.songs[5].lyrics_state} </div>
+                        <div>${results.response.songs[5].title}</div>`;
 };
 
 
