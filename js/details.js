@@ -30,8 +30,8 @@ mainContent.innerHTML = "";
 
 function createHtml(results) {
   mainContent.innerHTML = `<h1>${results.response.songs[5].full_title}</h1>
-                        <div>${results.response.songs[5].lyrics_state} </div>
-                        <div>${results.response.songs[5].title}</div>`;
+                          <div>${results.response.songs[5].lyrics_state} </div>
+                          <div>${results.response.songs[5].title}</div>`;
 };
 
 
