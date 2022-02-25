@@ -8,6 +8,7 @@ const keyHeadersInfo = {
   },
 };
 
+
 const mainContent = document.querySelector(".mainContent");
 
 async function fetchTheTitle() {
