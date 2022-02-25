@@ -1,8 +1,9 @@
 // JS MA1
+const loader = document.querySelector("loaderscreen")
 
 const resultsBag = document.querySelector(".results");
 
-resultsBag.innerHTML = "";
+resultsBag.innerHTML= "";
 
 async function forTheApi() {
   try {
@@ -19,7 +20,7 @@ async function forTheApi() {
   );
 
   const json = await response.json();
-
+  loader.style.display = "none"; 
   console.log(json);
 
   const results = json.response.songs;
