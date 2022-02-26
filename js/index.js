@@ -3,7 +3,6 @@ const loader = document.querySelector("loaderscreen")
 
 const resultsBag = document.querySelector(".results");
 
-resultsBag.innerHTML= "";
 
 async function forTheApi() {
   try {
@@ -20,10 +19,13 @@ async function forTheApi() {
   );
 
   const json = await response.json();
-  loader.style.display = "none"; 
+  loader.style.display = "none";
   console.log(json);
 
   const results = json.response.songs;
+ 
+  
+
 
 
 
@@ -32,8 +34,8 @@ async function forTheApi() {
     console.log(results.full_title);
     console.log(results.path);
     resultsBag.innerHTML += `<a href="details.html?path=${results.path}" class="bottom">
-                                  <h1>${results.annotation_count}</h1>
-                                   <h2>${results.full_title}</h2>
+                                  <h1>${results.full_title}</h1>
+                                  <h2>${results.annotation_count}</h2>
                                    <h3>${results.path}</h3>`                     
   });
 
@@ -42,7 +44,6 @@ async function forTheApi() {
   resultsContainer.innerHTML = message("error", error);
 }
 };
-
 
 
 forTheApi();
