@@ -10,7 +10,7 @@ const keyHeadersInfo = {
 };
 
 
-const mainContent = document.querySelector(".mainContent");
+const mainContent = document.querySelector(".main-content");
 
 async function fetchTheTitle() {
 
