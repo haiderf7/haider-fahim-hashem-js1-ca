@@ -8,20 +8,53 @@
   display: block;
 }
 
+.h2-h3-js {
+  text-align: center;
+  color: black;
+}
+
+.h1-js {
+  text-align: center;
+}
+
+.details-text {
+  text-align: center;
+  margin: 20px;
+}
+
 body {
   padding: 20px 40px;
   font-family: sans-serif;
   background: #ebebeb;
 }
 
+nav {
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-bar {
+  text-decoration: none;
+  font-size: x-large;
+  color: black;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.nav-bar:hover {
+  box-shadow: inset 200px 0 0 0 white;
+}
+
+/*Contact page*/
+
 .form-container {
   max-width: 760px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 form {
   padding: 2em;
-  background: white;
   border-radius: 1rem;
 }
 
@@ -35,12 +68,17 @@ input {
 button {
   background: #f59f05;
   border: none;
-  width: 200px;
-  padding: 1rem;
+  width: 100%;
+  padding: 20px;
   color: white;
   margin-top: 10px;
   cursor: pointer;
   border-radius: 0.2rem;
+  font-size: larger;
+}
+
+button:hover {
+  box-shadow: inset 700px 0 0 0 black;
 }
 
 label {

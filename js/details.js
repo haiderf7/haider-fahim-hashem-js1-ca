@@ -1,5 +1,6 @@
 
 const url = "https://genius.p.rapidapi.com/artists/16775/songs/";
+const loader = document.querySelector(".loaderscreen");
 
 const keyHeadersInfo = {
   headers: {
@@ -24,15 +25,17 @@ async function fetchTheTitle() {
 
 }catch (error) {
     console.log(error);
+  loader.style.display = "none";
   } 
 };
 
 mainContent.innerHTML = "";
 
 function createHtml(results) {
-  mainContent.innerHTML = `<h1>${results.response.songs[5].full_title}</h1>
-                          <div>${results.response.songs[5].lyrics_state} </div>
-                          <div>${results.response.songs[5].title}</div>`;
+  loader.style.display = "none";
+  mainContent.innerHTML = `<h1 class="details-text">${results.response.songs[5].full_title}</h1>
+                          <div class="details-text">${results.response.songs[5].lyrics_state} </div>
+                          <div class="details-text">${results.response.songs[5].title}</div>`;
 };
 
 
